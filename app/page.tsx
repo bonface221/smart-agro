@@ -2,6 +2,7 @@ import BottomCTA from "./components/bottom-cta";
 import Brands from "./components/brands";
 import CompletedWork from "./components/completed-work";
 import ContactUs from "./components/contact";
+import Footer from "./components/footer";
 import HeroSection from "./components/hero";
 import OurIntroduction from "./components/introduction";
 import ModernAgriculture from "./components/modern-agriculture";
@@ -26,6 +27,7 @@ export default function Home() {
       <ContactUs />
       <Brands />
       <BottomCTA />
+      <Footer />
     </>
   );
 }
