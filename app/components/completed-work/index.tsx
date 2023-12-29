@@ -56,31 +56,38 @@ const CompletedWork = () => {
             <Stack
               key={p.id}
               borderRadius="lg"
+              bgImage={`url(${p.img})`}
+              bgSize="cover"
+              bgRepeat={"no-repeat"}
               cursor="pointer"
               pos="relative"
               h="350px"
+              zIndex={99999}
               overflow="hidden"
               transition="all .3s ease-in-out"
               border="1.5px solid rgba(247, 195, 95,0)"
               _hover={{
                 border: "1.5px solid rgba(247, 195, 95,1)",
+
                 transform: "translateY(-15px)",
+                ".bg-overlay": {
+                  display: "block",
+                },
                 _after: {
                   content: '""',
-                  position: "absolute",
                   top: 0,
                   left: 0,
-                  width: "100%",
-                  height: "100%",
-                  background:
-                    "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.80) 100%)",
+                  pos: "absolute",
+                  w: "100%",
+                  h: "100%",
+                  bg: "linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.80) 100%)",
+                  zIndex: -1,
                 },
                 ".agri-overlay": {
                   opacity: 1,
                 },
               }}
             >
-              <Image src={p.img} height="100%" alt={p.title} />
               <Stack
                 pos="absolute"
                 bottom={0}

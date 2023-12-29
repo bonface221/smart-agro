@@ -15,11 +15,30 @@ const Testimonials = () => {
       >
         WHAT THEY&apos;RE TAKING ABOUT
       </Heading>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} marginX={marginX}>
-        <Stack>
-          <Image src="/testimonial-img.jpg" alt="testimonial-img" />
+      <SimpleGrid
+        columns={{ base: 1, md: 2 }}
+        mt="2rem"
+        spacing={2}
+        marginX={marginX}
+      >
+        <Stack align="center" pos="relative" justify="center">
+          <Image
+            src="/testimonial-img.jpg"
+            borderRadius="full"
+            boxSize="250px"
+            objectFit="cover"
+            alt="testimonial-img"
+          />
+          <Image
+            src="/quote.svg"
+            pos="absolute"
+            top="-20px"
+            left="50%"
+            transform="translateX(50%)"
+            alt="quote-img"
+          />
         </Stack>
-        <Stack>
+        <Stack spacing="6">
           <Text opacity=".8">
             “Lorem ipsum dolor sit amet consectetur. Tortor tempus cursus leo
             dictumst elementum. Sagittis elit turpis dignissim turpis tristique
@@ -31,7 +50,9 @@ const Testimonials = () => {
             proin pellentesque platea.”
           </Text>
           <Stack>
-            <Heading fontSize="1.5rem">John Doe</Heading>
+            <Heading fontSize="lg" color="brand.white">
+              John Doe
+            </Heading>
             <Text opacity=".8">CEO, ABC Company</Text>
           </Stack>
         </Stack>
