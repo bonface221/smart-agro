@@ -1,3 +1,4 @@
+import CompletedWork from "./components/completed-work";
 import HeroSection from "./components/hero";
 import OurIntroduction from "./components/introduction";
 import Navbar from "./components/navbar";
@@ -12,6 +13,7 @@ export default function Home() {
       <OurIntroduction />
       <PopularFruits />
       <WatchVideo />
+      <CompletedWork />
     </>
   );
 }
