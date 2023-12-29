@@ -1,11 +1,14 @@
 import { BASE_URL as url } from "@app/config/config";
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Gothic_A1 } from "next/font/google";
 import "./globals.scss";
 import { Providers } from "./providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const gothic = Gothic_A1({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -15,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={inter.className}
+        className={gothic.className}
         style={{
           backgroundColor: "var(--chakra-colors-brand-greenBg)",
         }}

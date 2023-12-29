@@ -15,7 +15,7 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <Box py="39.86px">
+    <Box py="30px" bg="brand.green">
       <Flex justify="space-between" marginX={marginX}>
         <Image src="/logo.svg" width={197} height={40} alt="logo" />
         <Flex gap="6">
