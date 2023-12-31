@@ -15,7 +15,7 @@ import GithubCTA from "./components/GithubCTA";
 const HeroSection = () => {
   return (
     <Stack
-      bgImage="/hero-img.png"
+      bgImage="/hero-img.webp"
       bgSize="cover"
       bgRepeat="no-repeat"
       bgPosition="center"
