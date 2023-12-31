@@ -10,6 +10,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
+import GithubCTA from "./components/GithubCTA";
 
 const HeroSection = () => {
   return (
@@ -75,6 +76,7 @@ const HeroSection = () => {
           </Stack>
         </GridItem>
       </Grid>
+      <GithubCTA />
     </Stack>
   );
 };
