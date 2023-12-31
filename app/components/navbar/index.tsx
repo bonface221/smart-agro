@@ -18,7 +18,7 @@ const Navbar = () => {
     <Box py="30px" bg="brand.green">
       <Flex justify="space-between" marginX={marginX}>
         <Image src="/logo.svg" width={197} height={40} alt="logo" />
-        <Flex gap="6">
+        <Flex gap="6" display={{ base: "none", md: "flex" }}>
           {navItems.map((item, i) => (
             <Text
               fontWeight={i === 0 ? "700" : "normal"}

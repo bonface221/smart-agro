@@ -18,12 +18,11 @@ const HeroSection = () => {
       bgSize="cover"
       bgRepeat="no-repeat"
       bgPosition="center"
-      h="90vh"
-      w="100%"
+      h={{ base: "70vh", sm: "90vh" }}
     >
       <Grid h="100%" gridTemplateRows="repeat(4,1fr)">
         <GridItem gridRow={2}>
-          <Stack maxW="40%" marginX={marginX} gap={4}>
+          <Stack maxW={{ base: "80%", md: "40%" }} marginX={marginX} gap={4}>
             {/* add an image on the after p */}
             <Box w="fit-content" pos="relative">
               <Text fontSize="xl" fontWeight="semibold">
@@ -37,7 +36,10 @@ const HeroSection = () => {
                 alt="text-underline"
               />
             </Box>
-            <Heading fontSize="6xl" color="brand.white">
+            <Heading
+              fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
+              color="brand.white"
+            >
               <Box as="span" display="inline-block" color="brand.main">
                 Agriculture Maste
                 <Box as="span" pos="relative">

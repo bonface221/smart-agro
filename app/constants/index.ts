@@ -1,4 +1,4 @@
-export const marginX = "8%";
+export const marginX = { base: "2.5%", sm: "5%", md: "8%" };
 
 export const fruits = [
   {

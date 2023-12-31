@@ -26,16 +26,16 @@ const modernData = [
 
 const ModernAgriculture = () => {
   return (
-    <Grid gridTemplateColumns="repeat(5,1fr)" my="3rem">
+    <Grid gridTemplateColumns={{ base: "1fr", md: "repeat(5,1fr)" }} my="3rem">
       <GridItem
-        colSpan={2}
+        colSpan={{ base: "auto", md: 2 }}
         pos="relative"
         _after={{
           content: "url('/modern-badge.png')",
           pos: "absolute",
           top: 0,
           right: 0,
-          transform: "translateX(50%)",
+          transform: { base: "translateX(0%)", md: "translateX(50%)" },
           zIndex: 99,
         }}
       >
@@ -49,12 +49,21 @@ const ModernAgriculture = () => {
       <GridItem colSpan={3} p="4rem" bg="brand.lightGreen" pos="relative">
         <Stack gap={8}>
           <Text textTransform="uppercase">Modern Agriculture</Text>
-          <Heading color="brand.white" fontSize="5xl" maxW="xl">
+          <Heading
+            color="brand.white"
+            fontSize={{ base: "2xl", md: "5xl" }}
+            maxW="xl"
+          >
             Providing High Quality Products
           </Heading>
 
           {modernData.map((item) => (
-            <Flex key={item.id} gap={4} align="center">
+            <Flex
+              key={item.id}
+              gap={4}
+              align="center"
+              flexDir={{ base: "column", sm: "row" }}
+            >
               <Box bg="brand.green" borderRadius="full" p="4">
                 <Image src={item.img} alt={item.title} />
               </Box>

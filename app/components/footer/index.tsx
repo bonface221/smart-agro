@@ -26,8 +26,17 @@ const usefulLinks = [
 const Footer = () => {
   return (
     <>
-      <Grid marginX={marginX} mb="2rem" gridTemplateColumns="repeat(4,1fr)">
-        <GridItem display="flex" flexDir="column" gap={8} colSpan={2}>
+      <Grid
+        marginX={marginX}
+        mb="2rem"
+        gridTemplateColumns={{ base: "1fr", md: "repeat(4,1fr)" }}
+      >
+        <GridItem
+          display="flex"
+          flexDir="column"
+          gap={8}
+          colSpan={{ base: "auto", md: 2 }}
+        >
           <Box>
             <Image w="150px" src="/logo.svg" alt="logo" />
           </Box>
@@ -89,6 +98,7 @@ const Footer = () => {
         marginTop="2rem"
         py="2rem"
         justify="space-between"
+        flexDir={{ base: "column", md: "row" }}
       >
         <Text>Copyright©Smart Agro. All Rights Reserved.</Text>
         <Flex gap={3}>

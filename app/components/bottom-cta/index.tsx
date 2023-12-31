@@ -33,6 +33,7 @@ const BottomCTA = () => {
         justify="space-between"
         align="center"
         zIndex={999}
+        flexDir={{ base: "column", md: "row" }}
       >
         <Flex align="center" gap={8}>
           <Box bg="brand.green" borderRadius="full" p="4">

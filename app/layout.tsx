@@ -20,6 +20,7 @@ export default function RootLayout({
       <body
         className={gothic.className}
         style={{
+          overflowX: "hidden",
           backgroundColor: "var(--chakra-colors-brand-greenBg)",
         }}
       >

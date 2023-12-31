@@ -16,7 +16,7 @@ const PopularFruits = () => {
       >
         Quality Fruits & Vegetables
       </Heading>
-      <SimpleGrid columns={{ base: 2, sm: 3, md: 6 }} spacing={5}>
+      <SimpleGrid columns={{ base: 2, md: 6 }} spacing={5}>
         {fruits.map((fruit) => (
           <Stack
             key={fruit.id}
@@ -27,6 +27,7 @@ const PopularFruits = () => {
             _hover={{
               bg: "brand.main",
             }}
+            align="center"
           >
             <Image src={fruit.image} width={60} height={60} alt={fruit.name} />
             <Text>{fruit.name}</Text>

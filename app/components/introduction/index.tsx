@@ -39,7 +39,7 @@ const OurIntroduction = () => {
         zIndex: -1,
       }}
     >
-      <SimpleGrid columns={2} spacing={10} marginX={marginX}>
+      <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10} marginX={marginX}>
         <Stack pos="relative">
           <Image
             borderRadius="10px"

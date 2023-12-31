@@ -12,7 +12,13 @@ const WatchVideo = () => {
       bgRepeat="no-repeat"
       align="center"
     >
-      <Flex justify="space-between" align="center" marginX={marginX} w="100%">
+      <Flex
+        justify="space-between"
+        flexDir={{ base: "column", sm: "row" }}
+        align="center"
+        marginX={marginX}
+        w="100%"
+      >
         <Heading color="brand.white" w="100%">
           Agriculture Matters to the Future of Bangladesh
         </Heading>
