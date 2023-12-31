@@ -29,6 +29,7 @@ const Footer = () => {
       <Grid
         marginX={marginX}
         mb="2rem"
+        gridGap={10}
         gridTemplateColumns={{ base: "1fr", md: "repeat(4,1fr)" }}
       >
         <GridItem

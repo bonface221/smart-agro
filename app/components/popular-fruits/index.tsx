@@ -5,7 +5,7 @@ import React from "react";
 
 const PopularFruits = () => {
   return (
-    <Stack marginX={marginX} my={"5rem"} gap={6}>
+    <Stack marginX={marginX} my={{ base: "2.5rem", sm: "5rem" }} gap={6}>
       <Text textTransform="uppercase" textAlign="center" opacity=".8">
         Popular foods and vegetables
       </Text>

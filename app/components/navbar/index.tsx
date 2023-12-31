@@ -1,16 +1,16 @@
 import { marginX } from "@/app/constants";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
+import MobileNav from "./components/mobile-nav";
 
-const navItems = [
+export const navItems = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "#about" },
   { name: "Our Products", href: "#products" },
   { name: "Projects", href: "#projects" },
   { name: "Services", href: "#services" },
   { name: "News", href: "#news" },
-  { name: "Contact Us", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
     <Box py="30px" bg="brand.green">
       <Flex justify="space-between" marginX={marginX}>
         <Image src="/logo.svg" width={197} height={40} alt="logo" />
-        <Flex gap="6" display={{ base: "none", md: "flex" }}>
+        <Flex gap="6" display={{ base: "none", md: "flex" }} align="center">
           {navItems.map((item, i) => (
             <Text
               fontWeight={i === 0 ? "700" : "normal"}
@@ -43,7 +43,23 @@ const Navbar = () => {
               {item.name}
             </Text>
           ))}
+          <Button
+            bg="brand.main"
+            p="20px"
+            borderRadius="none"
+            color="brand.green"
+            transition="all 0.3s ease-in-out"
+            _hover={{
+              bg: "brand.black",
+              color: "brand.white",
+            }}
+          >
+            Contact Us
+          </Button>
         </Flex>
+        <Box display={{ base: "block", md: "none" }}>
+          <MobileNav />
+        </Box>
       </Flex>
     </Box>
   );

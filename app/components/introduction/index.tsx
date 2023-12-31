@@ -26,7 +26,7 @@ const listData = [
 const OurIntroduction = () => {
   return (
     <Box
-      py="5rem"
+      py={{ base: "2rem", sm: "5rem" }}
       pos="relative"
       _after={{
         content: '""',
@@ -40,12 +40,12 @@ const OurIntroduction = () => {
       }}
     >
       <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10} marginX={marginX}>
-        <Stack pos="relative">
+        <Stack pos="relative" mb={{ base: "3rem", lg: "0" }}>
           <Image
             borderRadius="10px"
             src="/intro-img.png"
             width="100%"
-            height="551px"
+            height={{ base: "400px", sm: "551px" }}
             alt="intro-image"
             objectFit="cover"
           />
@@ -56,8 +56,9 @@ const OurIntroduction = () => {
             transform="translateX(-50%) translateY(50%)"
             borderRadius="10px"
             bg="brand.lightGreen"
-            p="1.4rem 1.8rem"
-            w="70%"
+            p={{ base: "1rem", sm: "1.4rem 1.8rem" }}
+            w={{ base: "90%", sm: "70%" }}
+            align="center"
             gap={2}
           >
             <Box>
@@ -82,7 +83,11 @@ const OurIntroduction = () => {
         </Stack>
         <Stack gap={4}>
           <Text textTransform="uppercase">Our Introduction</Text>
-          <Heading fontSize="5xl" color="brand.white" mb={4}>
+          <Heading
+            fontSize={{ base: "3xl", md: "5xl" }}
+            color="brand.white"
+            mb={4}
+          >
             Pure Agriculture and Organic Form
           </Heading>
           <Heading color="brand.main" fontSize="2xl">

@@ -26,7 +26,10 @@ const modernData = [
 
 const ModernAgriculture = () => {
   return (
-    <Grid gridTemplateColumns={{ base: "1fr", md: "repeat(5,1fr)" }} my="3rem">
+    <Grid
+      gridTemplateColumns={{ base: "1fr", md: "repeat(5,1fr)" }}
+      my={{ base: "1.8rem", sm: "3rem" }}
+    >
       <GridItem
         colSpan={{ base: "auto", md: 2 }}
         pos="relative"
@@ -48,11 +51,14 @@ const ModernAgriculture = () => {
       </GridItem>
       <GridItem colSpan={3} p="4rem" bg="brand.lightGreen" pos="relative">
         <Stack gap={8}>
-          <Text textTransform="uppercase">Modern Agriculture</Text>
+          <Text textTransform="uppercase" zIndex={99}>
+            Modern Agriculture
+          </Text>
           <Heading
             color="brand.white"
             fontSize={{ base: "2xl", md: "5xl" }}
             maxW="xl"
+            zIndex={99}
           >
             Providing High Quality Products
           </Heading>
@@ -78,13 +84,9 @@ const ModernAgriculture = () => {
             </Flex>
           ))}
         </Stack>
-        <Image
-          src="/modern-sm.png"
-          alt="modern-sm"
-          pos="absolute"
-          top={0}
-          right="0"
-        />
+        <Box pos="absolute" top={0} right="0">
+          <Image src="/modern-sm.png" alt="modern-sm" />
+        </Box>
       </GridItem>
     </Grid>
   );

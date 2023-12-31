@@ -5,7 +5,7 @@ import React from "react";
 const Brands = () => {
   return (
     <SimpleGrid
-      marginY="8rem"
+      marginY={{ base: "3rem", sm: "6rem", md: "8rem" }}
       marginX={marginX}
       columns={{ base: 2, sm: 3, md: 6 }}
       spacing={6}

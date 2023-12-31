@@ -4,7 +4,7 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <Stack marginX={marginX} py={"5rem"} gap={6}>
+    <Stack marginX={marginX} py={{ base: "2.5rem", sm: "5rem" }} gap={6}>
       <Text textTransform="uppercase" textAlign="center" opacity=".8">
         Our Testimonials
       </Text>

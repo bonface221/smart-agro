@@ -15,6 +15,7 @@ const WatchVideo = () => {
       <Flex
         justify="space-between"
         flexDir={{ base: "column", sm: "row" }}
+        gap={{ base: "2rem", sm: "0" }}
         align="center"
         marginX={marginX}
         w="100%"

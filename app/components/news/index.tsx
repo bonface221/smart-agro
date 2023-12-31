@@ -38,7 +38,7 @@ const news = [
 
 const NewsAndArticles = () => {
   return (
-    <Stack marginX={marginX} my={"7rem"} gap={6}>
+    <Stack marginX={marginX} my={{ base: "3rem", md: "7rem" }} gap={6}>
       <Text textTransform="uppercase" textAlign="center" opacity=".8">
         From the blog
       </Text>

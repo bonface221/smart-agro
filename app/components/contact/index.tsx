@@ -13,19 +13,21 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <Box marginX={marginX} my="6rem">
+    <Box marginX={marginX} my={{ base: "3rem", sm: "6rem" }}>
       <SimpleGrid columns={{ base: 1, md: 2 }} gap={6}>
-        <Stack gap={4}>
-          <Text textTransform="uppercase" opacity=".8">
-            Contact Now
-          </Text>
-          <Heading textTransform="uppercase" color="brand.white">
-            Get In Touch Now
-          </Heading>
-          <Text opacity=".8">
-            Lorem ipsum dolor sit amet, adipiscing elit. In hac habitasse platea
-            dictumst. Duis porta,quam ut finibus ultrices.
-          </Text>
+        <Stack gap={8}>
+          <Stack>
+            <Text textTransform="uppercase" opacity=".8">
+              Contact Now
+            </Text>
+            <Heading textTransform="uppercase" color="brand.white">
+              Get In Touch Now
+            </Heading>
+            <Text opacity=".8">
+              Lorem ipsum dolor sit amet, adipiscing elit. In hac habitasse
+              platea dictumst. Duis porta,quam ut finibus ultrices.
+            </Text>
+          </Stack>
 
           <Stack>
             <Text opacity=".8" textTransform="uppercase">
